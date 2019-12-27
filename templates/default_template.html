@@ -1,11 +1,12 @@
 <html>
     <head>
+        <title> Pixunki &#x2014; {{ name }} </title>
         <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+        <link rel="stylesheet" link="href/css" href="{{ url_for('static', filename='mainstyle.css') }}">
     </head>
     <body>
-        <h1>Static {{ name }} </h1>
-        {{ content }}
-
-        <p>{{ morecontent }}</p>
+        <div id="top-banner"> {{ name }} </div>
+        <div id="menu"> {{ menu }} </div>
+        <div id="main-content"> {{ content }} </div>
     </body>
 </html>
