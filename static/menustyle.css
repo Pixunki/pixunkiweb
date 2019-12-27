@@ -1,0 +1,10 @@
+#menu ul {
+    padding: 3em;
+}
+
+#menu li {
+  list-style-type: '— ';
+  margin-bottom: 1em;
+  padding: 1em;
+  background-color: #aabbcc;
+}
