@@ -3,5 +3,17 @@
 {% block title %}NeoPixels{% endblock %}
 
 {% block content %}
-    NeoPixels go here.
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type=text/javascript>
+            $(function() {
+              $('div#press-me-button').bind('click', function() {
+                $.getJSON('/runFunction',
+                    function(data) {
+                  //do nothing
+                });
+                return false;
+              });
+            });
+    </script>
+    <div href="#" id="press-me-button" onclick="run">PRESS ME!!</div>
 {% endblock %}

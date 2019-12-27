@@ -1,0 +1,9 @@
+#press-me-button {
+    padding: 1em;
+    background-color: #33aa33;
+    width: 10em;
+}
+#press-me-button:hover {
+    background-color: #aa00aa;
+    cursor: pointer;
+}
