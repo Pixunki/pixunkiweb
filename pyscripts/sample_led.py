@@ -36,9 +36,7 @@ def my_led():
             else:
                 my_board.paint(pixel.COLORS["BLACK"])
 
-            status[0] = "idle"
-
-            time.sleep(1)
+            time.sleep(3)
     except KeyboardInterrupt:
         status[0] = "dead"
 
