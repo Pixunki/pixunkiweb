@@ -29,10 +29,8 @@ def my_led():
 
         while True:
             print(status)
-            if status[0] == "green":
-                my_board.paint(pixel.COLORS["GREEN"])
-            elif status[0] == "blue":
-                my_board.paint(pixel.COLORS["DARKBLUE"])
+            if status[0] in pixel.COLORS.keys():
+                my_board.paint(status[0])
             else:
                 my_board.paint(pixel.COLORS["BLACK"])
 
