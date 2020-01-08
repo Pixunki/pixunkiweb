@@ -23,7 +23,14 @@ def people():
 
 @web_app.route("/runFunction")
 def button_action():
-    print("We did it, cowards!")
+    import socket as s
+    HOST_PORT = HOST, PORT = "127.0.0.1", 4343
+    new_status = b"busy"
+    print("We did it, cowards")
+    with s.socket(s.AF_INET, s.SOCK_STREAM) as sock:
+        sock.connect(HOST_PORT)
+        sock.sendall(new_status)
+
     return ""
 
 
