@@ -1,5 +1,8 @@
 import flask as fl
+
 web_app = fl.Flask(__name__)
+colours = ["green", "blue", "black", "red", "blue", "green"]
+seq_n = 0
 
 test = {
     "rogerio": "cool",
@@ -25,11 +28,15 @@ def people():
 def button_action():
     import socket as s
     HOST_PORT = HOST, PORT = "127.0.0.1", 4343
-    new_status = b"busy"
+    new_status = colours[seq_n%len(colours)]
+    seq_n += 1
     print("We did it, cowards")
-    with s.socket(s.AF_INET, s.SOCK_STREAM) as sock:
-        sock.connect(HOST_PORT)
-        sock.sendall(new_status)
+    try:
+        with s.socket(s.AF_INET, s.SOCK_STREAM) as sock:
+            sock.connect(HOST_PORT)
+            sock.sendall(new_status.encode("utf-8"))
+    except ConnectionRefusedError:
+        print("Warning: Couldn't connect with local listener.")
 
     return ""
 

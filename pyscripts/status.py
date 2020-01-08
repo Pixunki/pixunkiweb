@@ -3,22 +3,12 @@ import socket as s
 import select as sel
 
 HOST_PORT = HOST, PORT = "127.0.0.1", 4343
-status = "idle"
 
-def status_listener():
-    global status
+def status_sender(data):
     with s.socket(s.AF_INET, s.SOCK_STREAM) as sock:
-        sock.bind(HOST_PORT)
-        sock.listen()
-        while True:
-            ready = sel.select([sock], [], [], 2)
-            if ready[0]:
-                print("ready for new conn")
-                conn, addr = sock.accept()
-                status = conn.recv(1024)
+        sock.connect(HOST_PORT)
+        sock.sendall(new_status)
 
-            print(status)
-            status = "idle"
 
 if __name__ == '__main__':
     status_listener()
