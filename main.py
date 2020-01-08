@@ -27,7 +27,7 @@ def people():
 @web_app.route("/runFunction")
 def button_action():
     import socket as s
-    HOST_PORT = HOST, PORT = "0.0.0.0", 4343
+    HOST_PORT = HOST, PORT = "127.0.0.1", 4343
     new_status = colours[seq_n%len(colours)]
     seq_n += 1
     print("We did it, cowards")
