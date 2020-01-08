@@ -30,7 +30,7 @@ def my_led():
         while True:
             print(status)
             if status[0] in pixel.COLORS.keys():
-                my_board.paint(status[0])
+                my_board.paint(pixel.COLORS[status[0]])
             else:
                 my_board.paint(pixel.COLORS["BLACK"])
 
