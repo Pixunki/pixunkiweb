@@ -1,7 +1,7 @@
 import flask as fl
 
 web_app = fl.Flask(__name__)
-colours = ["GREEN", "DARKGREEN", "BLUE", "BLACK", "RED", "WHITE", "DARKWHITE","WHITE"]
+colours = ["GREEN", "DARKGREEN", "BLUE", "BLACK", "RED", "WHITE", "DARKWHITE","WHITE","YELLOW"]
 seq_n = 0
 
 test = {
