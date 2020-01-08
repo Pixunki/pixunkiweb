@@ -30,11 +30,11 @@ def my_led():
         while True:
             print(status)
             if status[0] == "green":
-                my_board.paint(pixel.COLORS["green"])
+                my_board.paint(pixel.COLORS["GREEN"])
             elif status[0] == "blue":
-                my_board.paint(pixel.COLORS["darkblue"])
+                my_board.paint(pixel.COLORS["DARKBLUE"])
             else:
-                my_board.paint(pixel.COLORS["black"])
+                my_board.paint(pixel.COLORS["BLACK"])
 
             status[0] = "idle"
 
