@@ -24,7 +24,10 @@ def run_neopixels():
 def people():
     return fl.render_template('people.html')
 
-@web_app.route("/runFunction")
+@web_app.route("/runFunction/<redcomp>/<greencomp>/<bluecomp>")
+@web_app.route("/runFunction/<board_n>/<redcomp>/<greencomp>/<bluecomp>")
+@web_app.route("/runFunction/<board_n>/<row_n>/<redcomp>/<greencomp>/<bluecomp>")
+@web_app.route("/runFunction/<board_n>/<row_n>/<col>/<redcomp>/<greencomp>/<bluecomp>")
 def button_action():
     import socket as s
     global seq_n
